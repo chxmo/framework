@@ -1,0 +1,1 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=cn.gov.zcy.redis.config.RedisAutoConfig

@@ -1,0 +1,145 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "cn.gov.zcy.redis.config.RedisConfig",
+      "name": "zcy.redis.conf",
+      "type": "cn.gov.zcy.redis.config.RedisConfig"
+    },
+    {
+      "sourceType": "cn.gov.zcy.redis.config.RedisConfig",
+      "name": "zcy.redis.conf.cluster",
+      "type": "cn.gov.zcy.redis.config.RedisConfig$Cluster"
+    },
+    {
+      "sourceType": "cn.gov.zcy.redis.config.RedisConfig",
+      "name": "zcy.redis.conf.pool",
+      "type": "cn.gov.zcy.redis.config.RedisConfig$Pool"
+    },
+    {
+      "sourceType": "cn.gov.zcy.redis.config.RedisConfig",
+      "name": "zcy.redis.conf.sentinel",
+      "type": "cn.gov.zcy.redis.config.RedisConfig$Sentinel"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "cn.gov.zcy.redis.config.RedisConfig$Cluster",
+      "name": "zcy.redis.conf.cluster.max-redirects",
+      "description": "Maximum number of redirects to follow when executing commands across the\n cluster.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "cn.gov.zcy.redis.config.RedisConfig$Cluster",
+      "name": "zcy.redis.conf.cluster.nodes",
+      "description": "Comma-separated list of \"host:port\" pairs to bootstrap from. This represents an\n \"initial\" list of cluster nodes and is required to have at least one entry.",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "cn.gov.zcy.redis.config.RedisConfig",
+      "defaultValue": 0,
+      "name": "zcy.redis.conf.database",
+      "description": "Database index used by the connection factory.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "cn.gov.zcy.redis.config.RedisConfig",
+      "name": "zcy.redis.conf.enabled",
+      "description": "redis useable or not",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "cn.gov.zcy.redis.config.RedisConfig",
+      "name": "zcy.redis.conf.host",
+      "description": "Redis server host.",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "cn.gov.zcy.redis.config.RedisConfig",
+      "name": "zcy.redis.conf.password",
+      "description": "Login password of the redis server.",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "cn.gov.zcy.redis.config.RedisConfig$Pool",
+      "defaultValue": 10,
+      "name": "zcy.redis.conf.pool.max-active",
+      "description": "Max number of connections that can be allocated by the pool at a given time.\n Use a negative value for no limit.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "cn.gov.zcy.redis.config.RedisConfig$Pool",
+      "defaultValue": 8,
+      "name": "zcy.redis.conf.pool.max-idle",
+      "description": "Max number of \"idle\" connections in the pool. Use a negative value to indicate\n an unlimited number of idle connections.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "cn.gov.zcy.redis.config.RedisConfig$Pool",
+      "defaultValue": "-1ms",
+      "name": "zcy.redis.conf.pool.max-wait",
+      "description": "Maximum amount of time (in milliseconds) a connection allocation should block\n before throwing an exception when the pool is exhausted. Use a negative value\n to block indefinitely.",
+      "type": "java.time.Duration"
+    },
+    {
+      "sourceType": "cn.gov.zcy.redis.config.RedisConfig$Pool",
+      "defaultValue": 0,
+      "name": "zcy.redis.conf.pool.min-idle",
+      "description": "Target for the minimum number of idle connections to maintain in the pool. This\n setting only has an effect if it is positive.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "cn.gov.zcy.redis.config.RedisConfig",
+      "defaultValue": 6379,
+      "name": "zcy.redis.conf.port",
+      "description": "Redis server port.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "cn.gov.zcy.redis.config.RedisConfig",
+      "name": "zcy.redis.conf.prefix",
+      "description": "cache data used by prefix",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "cn.gov.zcy.redis.config.RedisConfig$Sentinel",
+      "name": "zcy.redis.conf.sentinel.master",
+      "description": "Name of Redis server.",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "cn.gov.zcy.redis.config.RedisConfig$Sentinel",
+      "name": "zcy.redis.conf.sentinel.nodes",
+      "description": "Comma-separated list of \"host:port\" pairs to bootstrap from. This represents an\n \"initial\" list of sentinel nodes and is required to have at least three entry.",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "cn.gov.zcy.redis.config.RedisConfig",
+      "defaultValue": true,
+      "name": "zcy.redis.conf.share-native-connection",
+      "description": "lettuce客户端共享连接配置，默认为true；请谨慎修改这个参数！！！\n true：表示共享redis连接，但是在blpop阻塞命令\\事物操作中，会新建连接；这种方式占用连接数少，性能比jedis客户端高、稍微比连接池版本性能低点；\n false：表示每次去factory去获取连接的时候，都会新建连接；",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "cn.gov.zcy.redis.config.RedisConfig",
+      "defaultValue": "3000ms",
+      "name": "zcy.redis.conf.shutdown-timeout",
+      "description": "Connection closed timeout in milliseconds.",
+      "type": "java.time.Duration"
+    },
+    {
+      "sourceType": "cn.gov.zcy.redis.config.RedisConfig",
+      "defaultValue": false,
+      "name": "zcy.redis.conf.ssl",
+      "description": "Enable SSL.",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "cn.gov.zcy.redis.config.RedisConfig",
+      "defaultValue": "3000ms",
+      "name": "zcy.redis.conf.timeout",
+      "description": "Connection timeout in milliseconds.",
+      "type": "java.time.Duration"
+    }
+  ]
+}
